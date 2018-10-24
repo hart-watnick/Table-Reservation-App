@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v5/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+@font-face {
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v7/iJWKBXyIfDnIV7nBrXyw023e.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #E1D7D4;
+    height: 100%;
+}
+
+.container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 440px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+     
+}
+
+.available , .reserved {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #CCC;
+    color: black;
+    border-color: white;
+    border: 1px solid white;
+    border-bottom: 10px;
+    border-top: 10px;
+    margin: 25px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.title {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.heading {
+    font-family: "Rubik";
+    color: #E34E45;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+
+}
+
+.subhead {
+
+    font-family: "Roboto Mono";
+    margin-top: 8px;
+
+
+}
+
+.hoverstate {
+    background-color: #ADAAAA;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 480px;
+    width: 560px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px 40px 20px 40px;
+    position: relative;
+    bottom: 450px;
+    box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+}
+
+input {
+    margin: 25px;
+    font-size: 1em;
+    border: none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ADAAAA;
+    font-family: "Roboto Mono";
+
+    
+}
+
+.exit-btn {
+    position: absolute;
+    width: 10%;
+    left: 85%;
+    -webkit-appearance: none;
+    outline:none;
+    border: none;
+    font-size: larger;
+}
+
+.reserved {
+    background-color: #ADAAAA;
+}
+
+.submit-btn {
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
+    background-color: #008000;
+    padding: 10px;
+    margin-top: 70px;
+    color: white;
+    font-family: "Rubik";
+}
+
+.form-table-num {
+    font-family: "Roboto Mono";
+}
+
+.tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Roboto Mono";
+    background-color: #ADAAAA;
+    color: black;
+    position: absolute;
+    z-index: 999999999;
+    height: 45px;
+    width: 180px;
+    border: 3px solid black;
+    padding: 2px;
+    font-size: smaller;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    top: 80px;
+
+}
+
+@media only screen and (max-width: 700px) {
+
+
+    .container {
+        width: 80%;
+        background-color: transparent;
+    }
+    
+    .subhead {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .form{
+        width: 80%;
+        font-size: 1.5em;
+        height: 540px;
+
+    } 
+
+    .available , .reserved {
+        width: 200px;
+        height: 200px;
+        font-size: 3em;
+    }
+
+    .submit-btn {
+        height: 50px;
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+
+    input {
+        font-size: 1.3em;
+    }
+
+    .tooltip {
+        top: 135px;
+        width: 200%;
+        height: 70%;
+    }
+
+}
